@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>667</width>
+    <height>591</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="questionLabel">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>130</y>
+     <width>531</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(255,255,255,80);
+border-style:outset;
+border-width:3px;
+border-radius:10px;
+border-color:white;
+padding:4px;
+Font-size: 14px;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dlaczego danielek jest denty ?&lt;/p&gt;&lt;p&gt;&lt;br/&gt;A) Bo jest spod Rzeszowka.&lt;/p&gt;&lt;p&gt;B) Ponieważ Sprzedaje kolegów na psach.&lt;/p&gt;&lt;p&gt;C) Gdyż prowadził nielegalne prace rolne.&lt;/p&gt;&lt;p&gt;D) Nie pija wódki ani innych zacnych napoi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelNrQ">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">Font:bold 20px;
+padding: 6px;</string>
+   </property>
+   <property name="text">
+    <string>Question 1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonA">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>340</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButtonA{
+background-color:rgba(255,255,255,80);
+border-style:outset;
+border-width:3px;
+border-radius:10px;
+border-color:white;
+font-size:12px;
+padding:4px;
+}
+QPushButton#pushButtonA:hover {
+background-color: rgb(200,200,200,60);
+border-style: inset;
+}
+QPushButton#pushButtonA:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>A</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonB">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>340</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButtonB{
+background-color:rgba(255,255,255,80);
+border-style:outset;
+border-width:3px;
+border-radius:10px;
+border-color:white;
+font-size:12px;
+padding:4px;
+}
+QPushButton#pushButtonB:hover {
+background-color: rgb(200,200,200,60);
+border-style: inset;
+}
+QPushButton#pushButtonB:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>B</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonC">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>452</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButtonC{
+background-color:rgba(255,255,255,80);
+border-style:outset;
+border-width:3px;
+border-radius:10px;
+border-color:white;
+font-size:12px;
+padding:4px;
+}
+QPushButton#pushButtonC:hover {
+background-color: rgb(200,200,200,60);
+border-style: inset;
+}
+QPushButton#pushButtonC:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonD">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>450</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButtonD{
+background-color:rgba(255,255,255,80);
+border-style:outset;
+border-width:3px;
+border-radius:10px;
+border-color:white;
+font-size:12px;
+padding:4px;
+}
+QPushButton#pushButtonD:hover {
+background-color: rgb(200,200,200,60);
+border-style: inset;
+}
+QPushButton#pushButtonD:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>D</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>661</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>background.gif</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="header">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>20</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">Font:bold 20px;
+padding: 6px;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>questionLabel</zorder>
+  <zorder>labelNrQ</zorder>
+  <zorder>pushButtonA</zorder>
+  <zorder>pushButtonB</zorder>
+  <zorder>pushButtonC</zorder>
+  <zorder>pushButtonD</zorder>
+  <zorder>header</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

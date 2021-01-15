@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>widget</class>
+ <widget class="QWidget" name="widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>669</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-4</x>
+     <y>-8</y>
+     <width>671</width>
+     <height>592</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>background.gif</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>500</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#backButton {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+padding:4px;
+}
+QPushButton#backButton:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#backButton:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>200</y>
+     <width>271</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#Button2 {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+font:Bold 14px;
+padding:4px;
+}
+QPushButton#Button2:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#Button2:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Computer Games</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button1">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>271</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#Button1 {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+font:Bold 14px;
+padding:4px;
+}
+QPushButton#Button1:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#Button1:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Pokemon</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>300</y>
+     <width>271</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#Button3 {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+font:Bold 14px;
+padding:4px;
+}
+QPushButton#Button3:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#Button3:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Music</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

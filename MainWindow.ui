@@ -19,9 +19,34 @@
      <rect>
       <x>180</x>
       <y>90</y>
-      <width>271</width>
-      <height>61</height>
+      <width>270</width>
+      <height>60</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>270</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#startButton {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+font:Bold 14px;
+padding:4px;
+}
+QPushButton#startButton:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#startButton:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
     </property>
     <property name="text">
      <string>Start</string>
@@ -32,9 +57,34 @@
      <rect>
       <x>180</x>
       <y>190</y>
-      <width>271</width>
-      <height>61</height>
+      <width>270</width>
+      <height>60</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>270</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#categoryButton {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+font:Bold 14px;
+padding:4px;
+}
+QPushButton#categoryButton:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#categoryButton:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
     </property>
     <property name="text">
      <string>Category</string>
@@ -49,6 +99,30 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="maximumSize">
+     <size>
+      <width>270</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#exitButton {
+background-color:rgba(255,255,255,120);
+border-style:outset;
+border-width:2px;
+border-radius:10px;
+border-color:rgb(245, 183, 179);
+padding:4px;
+}
+QPushButton#exitButton:hover {
+background-color: rgb(255,255,255,60);
+border-style: inset;
+}
+QPushButton#exitButton:pressed {
+ background-color: rgb(186, 139, 136);
+ border-style: inset;
+}</string>
+    </property>
     <property name="text">
      <string>Exit</string>
     </property>
@@ -57,16 +131,16 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>-20</y>
       <width>671</width>
-      <height>561</height>
+      <height>591</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>background.gif</pixmap>
+     <pixmap>../../../.designer/backup/background.gif</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
