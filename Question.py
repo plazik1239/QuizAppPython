@@ -18,11 +18,11 @@ class Questions:
         "Jakie urządzenie pozwala na sprawdzenie informacji o pokemonie?\n\nA) Pokecounter \n\nB) Pokedex \n\n"
         "C) Pokefinder \n\n""D) Pokeinfo",
         "Jakie są trzy typy pokemonów startowych?\n\nA) Trawiasty,Ognisty i Wodny \n\nB) Elektryczny,Ziemny i Trujący\n\n"
-        "C)Smoczy,Latający i Normalny \n\nD) Psychiczny,Walczący i Duch",
+        "C) Smoczy,Latający i Normalny \n\nD) Psychiczny,Walczący i Duch",
         "Jak nazywa się głowny rywal Asha w podróży po regionie Kanto?\n\nA) Lance \n\nB) Giovanni \n\nC) Gary \n\nD) James",
         "Który z pokemonów nie jest evolucją Evee?\n\nA) Vaporeon \n\nB) Sylveon \n\nC) Leafeon \n\nD) Flygon",
         "Jak nazywa się pokemon uznawany za Boga?\n\nA) Arceus \n\nB) Mew \n\nC) Jirachi \nD) Celebi",
-        "Jak brzmią imiona dwóch członków zespołu R?\n\nA)Jessie i James \n\nB) Joanie i James\n\n"
+        "Jak brzmią imiona dwóch członków zespołu R?\n\nA) Jessie i James \n\nB) Joanie i James\n\n"
         "C) Jenny i John\n\nD)Jessie i John",
         "Kto użyczył głosu tytułowemu bohaterowi w filmie Detektyw Pikachu?\n\nA) Justice Smith\n\nB) Omar Chaparro\n\n"
         "C) Bill Nighy\n\nD) Ryan Reynolds",

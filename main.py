@@ -2,16 +2,40 @@ import sys
 from PyQt5.QtGui import QMovie
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from Question import Questions, Question
+from Question import Questions
+
+
+class ScoreWindow(QMainWindow):
+
+    def __init__(self, score):
+        super().__init__()
+        loadUi("UI_Windows/ScoreWindow.ui", self)
+        if score < 6:
+            jpg = "lowScore.gif"
+        elif score > 6:
+            jpg = "good score.gif"
+        else:
+            jpg = "ok.gif"
+        self.movie = QMovie("Resources/"+jpg)
+        self.label.setMovie(self.movie)
+        self.movie.start()
+        self.scoreLabel.setText("Twój wynik: " + str(score))
+        self.backButton.clicked.connect(sys.exit)
+        self.MainMenu.clicked.connect(lambda: self.toMenu())
+
+    def toMenu(self):
+        main_window.showNormal()
+        player.points = 0
+        self.destroy(True, True)
 
 
 class PlayWindow(QMainWindow):
 
     def __init__(self, category):
         super().__init__()
-        loadUi("PlayWindow.ui", self)
-        self.player = Player()
-        self.movie = QMovie("background.gif")
+        loadUi("UI_Windows/PlayWindow.ui", self)
+        self.dialog = None
+        self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
         self.movie.start()
         self.setFixedHeight(560)
@@ -23,7 +47,7 @@ class PlayWindow(QMainWindow):
         else:
             self.header.setText(category)
             self.questions = Questions()
-        self.question = self.questions.getQuestion(self.i)
+        self.question = self.questions.getQuestion(0)
         self.questionLabel.setText(self.question.prompt)
         self.pushButtonA.clicked.connect(lambda: self.checkAnswer("A"))
         self.pushButtonB.clicked.connect(lambda: self.checkAnswer("B"))
@@ -32,15 +56,23 @@ class PlayWindow(QMainWindow):
 
     def checkAnswer(self, answer):
         if answer == self.question.answer:
-            self.player.points += 1
+            player.points += 1
         self.i += 1
-        print(self.player.points)
-        self.nextQeustion()
+        if self.i == 10:
+            self.final(player.points)
+        else:
+            self.nextQeustion()
 
     def nextQeustion(self):
         self.question = self.questions.getQuestion(self.i)
         self.questionLabel.setText(self.question.prompt)
         self.labelNrQ.setText("Question " + str(self.i + 1))
+
+    def final(self, score):
+        self.dialog = ScoreWindow(score)
+        self.dialog.show()
+        self.i = 0
+        self.destroy(True, True)
 
 
 class CategoryWindow(QMainWindow):
@@ -48,8 +80,8 @@ class CategoryWindow(QMainWindow):
     def __init__(self):
         super(CategoryWindow, self).__init__()
         self.dialog = None
-        loadUi("CategoryWindow.ui", self)
-        self.movie = QMovie("background.gif")
+        loadUi("UI_Windows/CategoryWindow.ui", self)
+        self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
         self.movie.start()
         self.setFixedHeight(560)
@@ -66,19 +98,19 @@ class CategoryWindow(QMainWindow):
     def play(self, text):
         self.dialog = PlayWindow(text)
         self.dialog.show()
-        self.close()
+        self.destroy(True, True)
 
 
 class MainWindow(QMainWindow):
 
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.dialog = PlayWindow("all")
+        self.dialog = None
         self.dialog1 = CategoryWindow()
         self.setFixedHeight(560)
         self.setFixedWidth(660)
-        loadUi("MainWindow.ui", self)
-        self.movie = QMovie("background.gif")
+        loadUi("UI_Windows/MainWindow.ui", self)
+        self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
         self.movie.start()
         self.exitButton.clicked.connect(sys.exit)
@@ -86,6 +118,7 @@ class MainWindow(QMainWindow):
         self.categoryButton.clicked.connect(self.category)
 
     def play(self):
+        self.dialog = PlayWindow("all")
         self.dialog.show()
         self.close()
 
@@ -99,6 +132,7 @@ class Player:
         self.points = 0
 
 
+player = Player()
 app = QApplication(sys.argv)
 main_window = MainWindow()
 main_window.show()
