@@ -43,10 +43,9 @@ class PlayWindow(QMainWindow):
         self.i = 0  # number of question
         if category == "all":
             self.header.setText("All Categories")
-            self.questions = Questions()
         else:
             self.header.setText(category)
-            self.questions = Questions()
+        self.questions = Questions(category)
         self.question = self.questions.getQuestion(0)
         self.questionLabel.setText(self.question.prompt)
         self.pushButtonA.clicked.connect(lambda: self.checkAnswer("A"))
