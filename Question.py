@@ -24,7 +24,7 @@ class Questions:
         elif category == "Music":
             sequence = [i for i in range(20, 30)]
         else:
-            sequence = [i for i in range(20)]
+            sequence = [i for i in range(30)]
         self.subset = sample(sequence, 10)
         print(self.subset)
         self.questions = np.take(questions, np.array(self.subset))
@@ -71,7 +71,23 @@ prompts_Games = [
 ]
 
 prompts_Music = [
-
+    "Jak nazywa się utwór zespołu ABBA, dzięki któremu grupa wygrała Eurowizję w 1974 roku?\n\n"
+    "A) Money,Money,Money\n\nB) Waterloo\n\nC) Mamma Mia\n\nD) Gimme! Gimme! Gimme!",
+    "Który zespół jest autorem utworu 'The show must go on'?\n\nA) Queen\n\nB) Pink Floyd\n\n"
+    "C) The Beatles\n\nD) The Rolling Stones",
+    "Jak w muzyce nazywa się najwyższy głos żeński ?\n\nA) Tenor\n\nB) Alt\n\n"
+    "C) Sopran\n\nD) Kontralt",
+    "Który zespół wykonuje utwór 'Stairway to Heaven' ?\n\nA) Scorpions\n\nB) The Doors\n\n"
+    "C) R.E.M\n\nD) Led Zeppelin",
+    "Określenie w partyturze mówiące, że poszczególne nuty należy grać z wyraźnymi przerwami to?\n\n"
+    "A) Staccato\n\nB) Kantato\n\nC) Rasgueado\n\nD) Vibrato",
+    "Która z piosenek NIE jest utorstwa braci FIGO FAGOT ?\n\nA) Wędkarz miłości\n\nB) Wóda zryje banie\n\n"
+    "C) Hot Dog\n\nD) Biała mewa",
+    "Ile dźwięków występuje w skali chromatycznej ?\n\nA) 8\n\nB) 12\n\nC) 15\n\nD) 7",
+    "Jak nazywa się 5 dźwięk?\n\nA) Septyma\n\nB) Kwarta\n\nC) Kwinta\n\nD) Oktawa",
+    "Dokończ fragment piosenki: 'Trudno tak razem być nam zesobą'\n\nA) Z whiskey nie jest lżej\n\n"
+    "B) Bez siebie nie jest lżej\n\nC) Bo mnie denerwujesz\n\nD) Bo studiuję na WAT",
+    "Skąd wywodzi się muzyka country ?\n\nA) Z Czech\n\nB) Z Argentyny\n\nC) Z Polski\n\nD) Ze Stanów Zjednoczonych",
 ]
 
 questions = [
@@ -95,4 +111,14 @@ questions = [
     Question(prompts_Games[7], "B"),
     Question(prompts_Games[8], "A"),
     Question(prompts_Games[9], "B"),
+    Question(prompts_Music[0], "B"),
+    Question(prompts_Music[1], "A"),
+    Question(prompts_Music[2], "C"),
+    Question(prompts_Music[3], "D"),
+    Question(prompts_Music[4], "A"),
+    Question(prompts_Music[5], "D"),
+    Question(prompts_Music[6], "B"),
+    Question(prompts_Music[7], "C"),
+    Question(prompts_Music[8], "B"),
+    Question(prompts_Music[9], "D"),
 ]

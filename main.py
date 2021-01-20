@@ -10,6 +10,7 @@ class ScoreWindow(QMainWindow):
     def __init__(self, score):
         super().__init__()
         loadUi("UI_Windows/ScoreWindow.ui", self)
+        self.setWindowTitle("QuizApp - Score window")
         if score < 6:
             jpg = "lowScore.gif"
         elif score > 6:
@@ -20,7 +21,7 @@ class ScoreWindow(QMainWindow):
         self.label.setMovie(self.movie)
         self.movie.start()
         self.scoreLabel.setText("Twój wynik: " + str(score))
-        self.backButton.clicked.connect(sys.exit)
+        self.backButton.clicked.connect(lambda: self.endGame())
         self.MainMenu.clicked.connect(lambda: self.toMenu())
 
     def toMenu(self):
@@ -28,12 +29,18 @@ class ScoreWindow(QMainWindow):
         player.points = 0
         self.destroy(True, True)
 
+    def endGame(self):
+        self.destroy(True, True)
+        main_window.destroy(True, True)
+        sys.exit()
+
 
 class PlayWindow(QMainWindow):
 
     def __init__(self, category):
         super().__init__()
         loadUi("UI_Windows/PlayWindow.ui", self)
+        self.setWindowTitle("QuizApp - Play window")
         self.dialog = None
         self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
@@ -80,6 +87,7 @@ class CategoryWindow(QMainWindow):
         super(CategoryWindow, self).__init__()
         self.dialog = None
         loadUi("UI_Windows/CategoryWindow.ui", self)
+        self.setWindowTitle("QuizApp - Category window")
         self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
         self.movie.start()
@@ -109,6 +117,7 @@ class MainWindow(QMainWindow):
         self.setFixedHeight(560)
         self.setFixedWidth(660)
         loadUi("UI_Windows/MainWindow.ui", self)
+        self.setWindowTitle("QuizApp - Main menu")
         self.movie = QMovie("Resources/background.gif")
         self.label.setMovie(self.movie)
         self.movie.start()

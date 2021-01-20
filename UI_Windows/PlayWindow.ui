@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>130</y>
+     <y>110</y>
      <width>531</width>
-     <height>171</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -33,6 +33,9 @@ Font-size: 14px;</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dlaczego danielek jest denty ?&lt;/p&gt;&lt;p&gt;&lt;br/&gt;A) Bo jest spod Rzeszowka.&lt;/p&gt;&lt;p&gt;B) Ponieważ Sprzedaje kolegów na psach.&lt;/p&gt;&lt;p&gt;C) Gdyż prowadził nielegalne prace rolne.&lt;/p&gt;&lt;p&gt;D) Nie pija wódki ani innych zacnych napoi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="labelNrQ">
